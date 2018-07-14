@@ -14,6 +14,9 @@
 		3B84CF8F20F89FED002B485A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B84CF8D20F89FED002B485A /* LaunchScreen.storyboard */; };
 		3B84CF9220F89FED002B485A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B84CF9120F89FED002B485A /* main.m */; };
 		3B84CF9A20F8A012002B485A /* SubButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B84CF9920F8A012002B485A /* SubButton.m */; };
+		3B84CF9D20F9CDBA002B485A /* TargetButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B84CF9C20F9CDBA002B485A /* TargetButton.m */; };
+		3B84CFA020F9D6C6002B485A /* DelegateButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B84CF9F20F9D6C6002B485A /* DelegateButton.m */; };
+		3B84CFA320F9E062002B485A /* BlockButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B84CFA220F9E062002B485A /* BlockButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,12 @@
 		3B84CF9120F89FED002B485A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3B84CF9820F8A012002B485A /* SubButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubButton.h; sourceTree = "<group>"; };
 		3B84CF9920F8A012002B485A /* SubButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubButton.m; sourceTree = "<group>"; };
+		3B84CF9B20F9CDBA002B485A /* TargetButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TargetButton.h; sourceTree = "<group>"; };
+		3B84CF9C20F9CDBA002B485A /* TargetButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TargetButton.m; sourceTree = "<group>"; };
+		3B84CF9E20F9D6C6002B485A /* DelegateButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DelegateButton.h; sourceTree = "<group>"; };
+		3B84CF9F20F9D6C6002B485A /* DelegateButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DelegateButton.m; sourceTree = "<group>"; };
+		3B84CFA120F9E062002B485A /* BlockButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockButton.h; sourceTree = "<group>"; };
+		3B84CFA220F9E062002B485A /* BlockButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +81,12 @@
 				3B84CF8D20F89FED002B485A /* LaunchScreen.storyboard */,
 				3B84CF9020F89FED002B485A /* Info.plist */,
 				3B84CF9120F89FED002B485A /* main.m */,
+				3B84CF9B20F9CDBA002B485A /* TargetButton.h */,
+				3B84CF9C20F9CDBA002B485A /* TargetButton.m */,
+				3B84CF9E20F9D6C6002B485A /* DelegateButton.h */,
+				3B84CF9F20F9D6C6002B485A /* DelegateButton.m */,
+				3B84CFA120F9E062002B485A /* BlockButton.h */,
+				3B84CFA220F9E062002B485A /* BlockButton.m */,
 			);
 			path = HitTestButton;
 			sourceTree = "<group>";
@@ -146,10 +161,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B84CFA320F9E062002B485A /* BlockButton.m in Sources */,
 				3B84CF9A20F8A012002B485A /* SubButton.m in Sources */,
 				3B84CF8720F89FEA002B485A /* ViewController.m in Sources */,
+				3B84CFA020F9D6C6002B485A /* DelegateButton.m in Sources */,
 				3B84CF9220F89FED002B485A /* main.m in Sources */,
 				3B84CF8420F89FEA002B485A /* AppDelegate.m in Sources */,
+				3B84CF9D20F9CDBA002B485A /* TargetButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

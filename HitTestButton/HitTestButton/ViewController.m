@@ -8,8 +8,11 @@
 
 #import "ViewController.h"
 #import "SubButton.h"
+#import "TargetButton.h"
+#import "DelegateButton.h"
+#import "BlockButton.h"
 
-@interface ViewController ()
+@interface ViewController ()<DelelegateButtonDelegate>
 
 @end
 
@@ -17,6 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //扩大点击范围
     SubButton *subButton = [[SubButton alloc] initWithFrame:CGRectMake(200, 400, 50, 50)];
     subButton.backgroundColor = [UIColor redColor];
     subButton.titleLabel.text = @"SubButton";
@@ -28,10 +32,55 @@
     
     [self.view addSubview:backgroundView1];
     [self.view addSubview:subButton];
+    
+    //target 回调实现点击
+    TargetButton *targetButton = [[TargetButton alloc] initWithFrame:CGRectMake(50, 50, 50, 50)];
+    targetButton.backgroundColor = [UIColor blueColor];
+    [targetButton addTarget:self action:@selector(subButtonClick:)];
+    
+    [self.view addSubview:targetButton];
+    
+    //delegate 回调实现点击
+    DelegateButton *delegateButton = [[DelegateButton alloc] initWithFrame:CGRectMake(50, 150, 50, 50)];
+    delegateButton.delegate = self;
+    delegateButton.backgroundColor = [UIColor purpleColor];
+    
+    [self.view addSubview:delegateButton];
+    
+    //block 回调实现点击
+    BlockButton *blockButton = [[BlockButton alloc] initWithFrame:CGRectMake(50, 250, 50, 50)];
+    blockButton.backgroundColor = [UIColor yellowColor];
+    [blockButton setButtonShouldBlock:^BOOL(BlockButton *sender) {
+        NSLog(@"should Block");
+        return YES;
+    }];
+    [blockButton setButtonWillBlock:^(BlockButton *sender) {
+        NSLog(@"will Block");
+    }];
+    [blockButton setButtonDidBlock:^(BlockButton *sender) {
+        NSLog(@"Block Click");
+    }];
+    
+    [self.view addSubview:blockButton];
+    
 }
 
 - (void)subButtonClick:(UIButton *)sender {
     NSLog(@"SubButton Click");
+}
+
+- (BOOL)delegateButtonShouldTap:(DelegateButton *)sender {
+    NSLog(@"%s",__FUNCTION__);
+    return YES;
+}
+
+- (void)delegateButtonWillTap:(DelegateButton *)sender {
+    NSLog(@"%s",__FUNCTION__);
+}
+
+- (void)delegateButtonDidTap:(DelegateButton *)sender {
+    NSLog(@"%s",__FUNCTION__);
+    NSLog(@"Delegate Click");
 }
 
 - (void)didReceiveMemoryWarning {
